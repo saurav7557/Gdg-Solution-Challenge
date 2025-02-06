@@ -1,96 +1,146 @@
-# YouTube AI Analyzer (AIML)
+# **YouTube AI Analyzer (AIML)**  
 
-## Overview
-YouTube AI Analyzer is an innovative solution designed to protect intellectual property by detecting unauthorized use of Disney content on YouTube. The system uses AI and machine learning to analyze video content, identify potential copyright infringements, and generate automated takedown requests.
+## **Overview**  
+YouTube AI Analyzer is an advanced AI-driven system designed to detect copyright violations, unauthorized content, and intellectual property misuse on YouTube. By leveraging deep learning, NLP, and computer vision techniques, the system enables real-time monitoring, automated DMCA takedown requests, and predictive piracy analytics.  
 
-## Table of Contents
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [File Descriptions](#file-descriptions)
-- [Contributing](#contributing)
-- [Tech Stack](#tech-stack)
+## **Table of Contents**  
+- [Overview](#overview)  
+- [Table of Contents](#table-of-contents)  
+- [Project Structure (AIML)](#project-structure-aiml)  
+- [Features (AIML)](#features-aiml)  
+- [Project Structure (Frontend)](#project-structure-frontend)  
+- [Features (Frontend)](#features-frontend)  
+- [Project Structure (Backend)](#project-structure-backend)  
+- [Features (Backend)](#features-backend)  
+- [Configuration](#configuration)  
+- [Usage](#usage)  
+  - [Basic Usage](#basic-usage)  
+  - [Running Tests](#running-tests)  
+- [Tech Stack](#tech-stack)  
+- [Team](#team)  
+- [License](#license)  
+- [Contributing](#contributing)  
 
-## Project Structure (AIML)
+---
+
+## **Project Structure (AIML)**  
 ```
-📦 YouTube-AI-Analyzer  
- ┣ 📂 data/               # Data storage
- ┣ 📂 src/                # Source code
- ┣ 📂 notebooks/          # Jupyter notebooks
- ┣ 📂 tests/              # Unit tests
- ┣ 📜 requirements.txt    # Dependencies
- ┗ 📜 setup.py           # Package setup
+📦 AI-ML  
+ ┣ 📂 data/  
+ ┃ ┣ 📜 raw_videos.csv  
+ ┃ ┣ 📜 processed_videos.json  
+ ┃ ┣ 📂 logs/  
+ ┃ ┃ ┗ 📜 scraper.log  
+ ┃ ┣ 📂 models/  
+ ┃ ┃ ┣ 📜 yolo_weights.onnx  
+ ┃ ┃ ┗ 📜 audio_fingerprint.pkl  
+ ┃ ┗ 📜 dmca_requests.json  
+ ┣ 📂 src/  
+ ┃ ┣ 📂 api/  
+ ┃ ┃ ┣ 📜 youtube_scraper.py  
+ ┃ ┃ ┣ 📜 dmca_handler.py  
+ ┃ ┃ ┗ 📜 ai_integration.py  
+ ┃ ┣ 📂 processing/  
+ ┃ ┃ ┣ 📜 video_downloader.py  
+ ┃ ┃ ┣ 📜 frame_extractor.py  
+ ┃ ┃ ┗ 📜 audio_extractor.py  
+ ┃ ┣ 📂 ai/  
+ ┃ ┃ ┣ 📜 object_detection.py  
+ ┃ ┃ ┣ 📜 audio_analysis.py  
+ ┃ ┃ ┗ 📜 feature_extraction.py  
+ ┃ ┣ 📂 storage/  
+ ┃ ┃ ┗ 📜 firestore_db.py  
+ ┃ ┣ 📜 main.py  
+ ┃ ┣ 📜 config.py  
+ ┃ ┗ 📜 utils.py  
+ ┣ 📂 notebooks/  
+ ┃ ┗ 📜 exploratory_analysis.ipynb  
+ ┣ 📂 tests/  
+ ┃ ┣ 📜 test_scraper.py  
+ ┃ ┣ 📜 test_object_detection.py  
+ ┃ ┗ 📜 test_firestore_db.py  
+
+```
+## **Features (AIML)**  
+✔ Detects Disney characters and logos using AI  
+✔ Extracts audio fingerprints for copyrighted sound detection  
+✔ Generates automated DMCA takedown requests  
+✔ Stores analyzed video data in Firestore  
+✔ Provides real-time content monitoring  
+
+---
+
+## **Project Structure (Frontend)**  
+```
+📦 Frontend  
+ ┣ 📂 public/  
+ ┃ ┗ 📜 index.html  
+ ┣ 📂 src/  
+ ┃ ┣ 📂 components/  
+ ┃ ┃ ┣ 📜 Navbar.jsx  
+ ┃ ┃ ┣ 📜 VideoCard.jsx  
+ ┃ ┃ ┗ 📜 DMCAForm.jsx  
+ ┃ ┣ 📂 pages/  
+ ┃ ┃ ┣ 📜 Home.jsx  
+ ┃ ┃ ┣ 📜 VideoAnalysis.jsx  
+ ┃ ┃ ┗ 📜 DMCARequests.jsx  
+ ┃ ┣ 📂 services/  
+ ┃ ┃ ┣ 📜 api.js  
+ ┃ ┃ ┗ 📜 auth.js  
+ ┃ ┣ 📂 context/  
+ ┃ ┃ ┗ 📜 AppContext.js  
+ ┃ ┣ 📂 styles/  
+ ┃ ┃ ┗ 📜 styles.css  
+ ┃ ┣ 📜 App.jsx  
+ ┃ ┗ 📜 index.js  
+ ┣ 📜 package.json  
+ ┣ 📜 .env  
+ ┣ 📜 README.md  
+
+```
+## **Features (Frontend)**  
+✔ User-friendly dashboard to track detected copyright violations  
+✔ Form to submit DMCA takedown requests  
+✔ Real-time notifications on video status  
+✔ Dark and light mode UI  
+
+---
+
+## **Project Structure (Backend)**  
+```
+📦 Backend  
+ ┣ 📂 controllers/  
+ ┃ ┣ 📜 videoController.js  
+ ┃ ┣ 📜 aiController.js  
+ ┃ ┗ 📜 dmcaController.js  
+ ┣ 📂 models/  
+ ┃ ┗ 📜 videoModel.js  
+ ┣ 📂 routes/  
+ ┃ ┣ 📜 videoRoutes.js  
+ ┃ ┣ 📜 aiRoutes.js  
+ ┃ ┗ 📜 dmcaRoutes.js  
+ ┣ 📂 middleware/  
+ ┃ ┣ 📜 authMiddleware.js  
+ ┃ ┗ 📜 errorHandler.js  
+ ┣ 📂 config/  
+ ┃ ┗ 📜 db.js  
+ ┣ 📂 services/  
+ ┃ ┣ 📜 aiService.js  
+ ┃ ┗ 📜 dmcaService.js  
+ ┣ 📂 storage/  
+ ┃ ┗ 📜 upload.js  
+ ┣ 📜 app.js  
+ ┣ 📜 .env  
+ ┣ 📜 package.json
 ```
 
-## Features
-- Real-time YouTube video monitoring
-- AI-powered content analysis using OpenCV
-- Automated detection of Disney characters and logos
-- Integration with YouTube Data API
-- Firestore database for data storage
-- User-friendly dashboard for monitoring
+## **Features (Backend)**  
+✔ RESTful API for AI processing and takedown management  
+✔ Secure authentication using JWT  
+✔ Database integration with Firestore  
+✔ Handles YouTube video scraping and processing  
 
-## Project Structure (Frontend)
-```
-📦 client  
- ┣ 📂 node-module/
- ┣ 📂 src/
- ┣  ┣  📂 Components/
- ┣  ┣  📂 pages/
- ┣  ┣  📂 authStore/
- ┣  ┗  📂 services/
- ┣ 📜app.jsx
- ┗
-```
-
-## Features
-- Real-time YouTube video monitoring
-- AI-powered content analysis using OpenCV
-- Automated detection of Disney characters and logos
-- Integration with YouTube Data API
-- Firestore database for data storage
-- User-friendly dashboard for monitoring
-
-## Project Structure (Backend)
-```
-📦 backend  
- ┣ 📂 config/
- ┣  ┣ 📂 db/
- ┣  ┗ 📂 email/
- ┣ 📂 controllers/
- ┣ 📂 roots/
- ┣ 📂 models/
- ┣ 📜 index.js
- ┗ 📜 app.js
-```
-
-## Features
-- Real-time YouTube video monitoring
-- AI-powered content analysis using OpenCV
-- Automated detection of Disney characters and logos
-- Integration with YouTube Data API
-- Firestore database for data storage
-- User-friendly dashboard for monitoring
-
-<!-- ## Installation
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/youtube-ai-analyzer.git
-cd youtube-ai-analyzer
-```
-
-2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up environment variables
-```bash
-cp .env.example .env
-# Edit .env with your API keys
-``` -->
+---
 
 ## Configuration
 1. YouTube Data API Setup:
