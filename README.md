@@ -218,4 +218,4 @@ We welcome contributions! Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md)
 ---
 
 ## **Configuration**  
-Refer to the `CONFIGURE.md` for detailed instructions on setting up and configuring the project.
+Refer to the [CONFIGURE.md](CONFIGURE.md) for detailed instructions on setting up and configuring the project.
