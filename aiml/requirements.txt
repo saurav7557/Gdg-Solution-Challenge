@@ -1,0 +1,24 @@
+# Core dependencies
+google-api-python-client   # YouTube Data API
+pytube                     # Download YouTube videos
+pandas                     # Data handling
+
+# AI & Video Processing
+opencv-python              # Computer vision (frame extraction & analysis)
+numpy                      # Numerical operations
+torch                      # PyTorch (for AI models, optional)
+tensorflow                 # TensorFlow (if using deep learning)
+onnxruntime                # Running YOLO models in ONNX format
+
+# Firebase Backend Integration
+firebase-admin             # Firestore (database)
+google-cloud-firestore     # Firestore API client
+
+# Utility & Testing
+requests                   # Web requests
+tqdm                       # Progress bars
+loguru                     # Advanced logging
+pytest                     # Testing framework
+
+# Jupyter Notebook (if using notebooks for AI testing)
+notebook                   # Jupyter environment
