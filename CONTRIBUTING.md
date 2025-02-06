@@ -25,4 +25,4 @@ Clone the forked repository to your local machine to start working on it:
 
 ```bash
 git clone https://github.com/sktigpta/Gdg-Solution-Challenge.git
-cd repo-name
+cd Gdg-Solution-Challenge
