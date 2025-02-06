@@ -1,4 +1,4 @@
-# **Safeguarding Stories: AI for Intellectual Property Protection(AIML)**
+# **Safeguarding Stories: AI for Intellectual Property Protection (AIML)**
 
 **Problem Statement:**
 Disney's vast library of intellectual property, including movies, TV shows, and characters, is a prime target for cyberattacks and piracy.Unauthorized access and distribution of this content can lead to significant financial losses and damage to the brand.
