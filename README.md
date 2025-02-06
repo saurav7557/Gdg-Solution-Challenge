@@ -1,4 +1,8 @@
-# **YouTube AI Analyzer (AIML)**  
+# **Safeguarding Stories: AI for Intellectual Property Protection (AIML)**
+
+**Problem Statement:**
+Disney's vast library of intellectual property, including movies, TV shows, and characters, is a prime target for cyberattacks and piracy.Unauthorized access and distribution of this content can lead to significant financial losses and damage to the brand.
+
 
 ## **Overview**  
 YouTube AI Analyzer is an advanced AI-driven system designed to detect copyright violations, unauthorized content, and intellectual property misuse on YouTube. By leveraging deep learning, NLP, and computer vision techniques, the system enables real-time monitoring, automated DMCA takedown requests, and predictive piracy analytics.  
@@ -141,85 +145,11 @@ YouTube AI Analyzer is an advanced AI-driven system designed to detect copyright
 ✔ Handles YouTube video scraping and processing  
 
 ---
+## Team Members
 
-## Configuration
-1. YouTube Data API Setup:
-   - Create a Google Cloud Project
-   - Enable YouTube Data API
-   - Generate API key
-
-2. Firebase Setup:
-   - Create a Firebase project
-   - Enable Firestore
-   - Download service account key
-
-
-### Core Components
-
-| File | Description | Function |
-|------|-------------|-----------|
-| `src/main.py` | Entry point | Orchestrates the entire application flow |
-| `src/config.py` | Configuration | Stores API keys and global settings |
-| `src/utils.py` | Utilities | Contains helper functions |
-
-### API Components
-
-| File | Description | Function |
-|------|-------------|-----------|
-| `src/api/youtube_scraper.py` | YouTube Scraper | Fetches videos using YouTube Data API |
-
-### Processing Components
-
-| File | Description | Function |
-|------|-------------|-----------|
-| `src/processing/video_downloader.py` | Video Downloader | Downloads YouTube videos for analysis |
-| `src/processing/frame_extractor.py` | Frame Extractor | Extracts frames from videos |
-
-### AI Components
-
-| File | Description | Function |
-|------|-------------|-----------|
-| `src/ai/object_detection.py` | Object Detection | Detects Disney characters and logos |
-| `src/ai/feature_extraction.py` | Feature Extraction | Extracts features from video frames |
-
-### Storage Components
-
-| File | Description | Function |
-|------|-------------|-----------|
-| `src/storage/firestore_db.py` | Database Handler | Manages Firestore operations |
-
-## Usage
-
-### Basic Usage
-```python
-from src.main import YouTubeAnalyzer
-
-analyzer = YouTubeAnalyzer()
-analyzer.start_monitoring()
-```
-
-### Running Tests
-```bash
-python -m pytest tests/
-```
-
-## Tech Stack
-- Python 3.8+
-- OpenCV for video analysis
-- TensorFlow/YOLO for object detection
-- Firebase Firestore for data storage
-- YouTube Data API v3
-- Flutter/React for dashboard
-
-## Team
-**Tech-NO-Logic**: A dynamic team of innovators uniting tech and creativity to solve real-world problems with cutting-edge solutions. Passion meets logic for impactful change. 🚀
-
-## License
-no license till now
-
-## Contributing
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+| Name                | Role                        | Description                | Contact                        |
+|---------------------|-----------------------------|----------------------------|--------------------------------|
+| Shaktidhar Gupta    | Leader & AIML Engineer       | Leads the team and works on AI/ML tasks | [shaktidhar@example.com](mailto:shaktidhar@example.com) |
+| Satyam Kumar        | Backend Developer           | Handles the server-side and database management | [satyam@example.com](mailto:satyam@example.com) |
+| Saurav Kumar        | Frontend Designer and UI/UX engg        | Works on the user interface design | [saurav@example.com](mailto:saurav@example.com) |
+| Rishi Srestha       | Frontend Designer & Documentation | Designs the UI and handles project documentation | [rishi@example.com](mailto:rishi@example.com) |
