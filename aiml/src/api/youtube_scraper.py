@@ -1,32 +1,16 @@
-from typing import List, Dict, Any
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 import logging
-from ..config import (
-    YOUTUBE_API_KEY,
-    YOUTUBE_API_VERSION,
-    YOUTUBE_MAX_RESULTS,
-    RECOGNIZED_CHANNEL_IDS
-)
 
 logger = logging.getLogger(__name__)
 
 class YouTubeScraper:
-    def __init__(self):
+    def __init__(self, api_key: str):
         """Initialize YouTube API client."""
-        self.youtube = build('youtube', YOUTUBE_API_VERSION, developerKey=YOUTUBE_API_KEY)
+        self.youtube = build('youtube', 'v3', developerKey=api_key)
 
-    def search_videos(self, query: str, max_results: int = YOUTUBE_MAX_RESULTS) -> List[Dict[str, Any]]:
-        """
-        Search for videos using YouTube Data API.
-        
-        Args:
-            query: Search query string
-            max_results: Maximum number of results to return
-            
-        Returns:
-            List of video data dictionaries
-        """
+    def search_videos(self, query: str, max_results: int = 50):
+        """Search for videos using YouTube Data API."""
         try:
             search_response = self.youtube.search().list(
                 q=query,
@@ -42,14 +26,15 @@ class YouTubeScraper:
             logger.error(f"Error searching YouTube videos: {str(e)}")
             return []
 
-    def _filter_unrecognized_channels(self, videos: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def _filter_unrecognized_channels(self, videos):
         """Filter out videos from recognized channels."""
+        recognized_channel_ids = ["some_channel_id1", "some_channel_id2"]  # Example channel IDs
         return [
             video for video in videos
-            if video.get('snippet', {}).get('channelId') not in RECOGNIZED_CHANNEL_IDS
+            if video.get('snippet', {}).get('channelId') not in recognized_channel_ids
         ]
 
-    def get_video_details(self, video_id: str) -> Dict[str, Any]:
+    def get_video_details(self, video_id):
         """Get detailed information about a specific video."""
         try:
             video_response = self.youtube.videos().list(
@@ -65,7 +50,7 @@ class YouTubeScraper:
             logger.error(f"Error getting video details: {str(e)}")
             return {}
 
-    def batch_get_video_details(self, video_ids: List[str]) -> List[Dict[str, Any]]:
+    def batch_get_video_details(self, video_ids):
         """Get details for multiple videos in batch."""
         try:
             video_response = self.youtube.videos().list(
