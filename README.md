@@ -154,6 +154,59 @@ Participants are tasked with developing AI-driven solutions to protect Disney's 
 
 ---
 
+## **Tech Stack**
+
+### **AIML (AI & Machine Learning) Dependencies**
+
+- **google-api-python-client**: YouTube Data API
+- **pytube**: Download YouTube videos
+- **pandas**: Data handling
+
+#### **AI & Video Processing**
+- **opencv-python**: Computer vision (frame extraction & analysis)
+- **numpy**: Numerical operations
+- **torch**: PyTorch (for AI models, optional)
+- **tensorflow**: TensorFlow (if using deep learning)
+- **onnxruntime**: Running YOLO models in ONNX format
+
+#### **Firebase Backend Integration**
+- **firebase-admin**: Firestore (database)
+- **google-cloud-firestore**: Firestore API client
+
+#### **Utility & Testing**
+- **requests**: Web requests
+- **tqdm**: Progress bars
+- **loguru**: Advanced logging
+- **pytest**: Testing framework
+
+#### **Jupyter Notebook (if using notebooks for AI testing)**
+- **notebook**: Jupyter environment
+
+---
+
+### **Backend Dependencies**
+
+- **express**: Web framework for Node.js
+- **cors**: Cross-Origin Resource Sharing
+- **firebase-admin**: Firebase Admin SDK
+- **dotenv**: Loads environment variables
+- **jsonwebtoken**: JWT for secure authentication
+
+---
+
+### **Frontend Dependencies**
+
+- **react**: React framework for building the user interface
+- **react-dom**: For React rendering on the web
+- **react-router-dom**: For routing between components in React
+- **axios**: For making HTTP requests to the backend
+- **redux**: State management in React
+- **redux-thunk**: Middleware for redux asynchronous actions
+- **material-ui**: UI component library
+- **styled-components**: CSS-in-JS for styling React components
+
+---
+
 ## **License**  
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
