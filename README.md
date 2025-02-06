@@ -1,11 +1,13 @@
-# **Safeguarding Stories: AI for Intellectual Property Protection (AIML)**
+# **Safeguarding Stories: AI for Intellectual Property Protection(AIML)**
 
 **Problem Statement:**
 Disney's vast library of intellectual property, including movies, TV shows, and characters, is a prime target for cyberattacks and piracy.Unauthorized access and distribution of this content can lead to significant financial losses and damage to the brand.
 
+**Objective:**
+Participants are tasked with developing AI-driven solutions to protect Disney's intellectual property from cyber threats. Solutions should include real-time monitoring, automated takedown requests, and predictive analytics to identify and mitigate piracy risks.
 
 ## **Overview**  
-YouTube AI Analyzer is an advanced AI-driven system designed to detect copyright violations, unauthorized content, and intellectual property misuse on YouTube. By leveraging deep learning, NLP, and computer vision techniques, the system enables real-time monitoring, automated DMCA takedown requests, and predictive piracy analytics.  
+Safeguarding Stories: AI for Intellectual Property Protection is an advanced AI-driven system designed to detect copyright violations, unauthorized content, and intellectual property misuse on YouTube. By leveraging deep learning, NLP, and computer vision techniques, the system enables real-time monitoring, automated DMCA takedown requests, and predictive piracy analytics.  
 
 ## **Table of Contents**  
 - [Overview](#overview)  
