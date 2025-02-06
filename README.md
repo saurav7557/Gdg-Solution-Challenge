@@ -152,6 +152,6 @@ Safeguarding Stories: AI for Intellectual Property Protection is an advanced AI-
 | Name                | Role                        | Description                | Contact                        |
 |---------------------|-----------------------------|----------------------------|--------------------------------|
 | Shaktidhar Gupta    | Leader & AIML Engineer       | Leads the team and works on AI/ML tasks | [sktigpta@gmail.com](mailto:sktigpta@gmail.com) |
-| Satyam Kumar        | Backend Developer           | Handles the server-side and database management | [satyam@example.com](mailto:satyam@example.com) |
+| Satyam Kumar        | Backend Developer           | Handles the server-side and database management | [jhajhasatyam100@gmail.com](mailto:jhajhasatyam100@gmail.com) |
 | Saurav Kumar        | Frontend Designer and UI/UX engg        | Works on the user interface design | [sauravkumar9447@gmail.com](mailto:sauravkumar9447@gmail.com) |
 | Rishi Srestha       | Frontend Designer & Documentation | Designs the UI and handles project documentation | [rishi@example.com](mailto:rishi@example.com) |
