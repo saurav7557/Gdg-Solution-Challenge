@@ -114,57 +114,121 @@ Safeguarding Stories: AI for Intellectual Property Protection is an advanced AI-
 
 ## **Project Structure (Backend)**  
 ```
-📦 Backend  
- ┣ 📂 controllers/  
- ┃ ┣ 📜 videoController.js  
- ┃ ┣ 📜 aiController.js  
- ┃ ┗ 📜 dmcaController.js  
- ┣ 📂 models/  
- ┃ ┗ 📜 videoModel.js  
- ┣ 📂 routes/  
- ┃ ┣ 📜 videoRoutes.js  
- ┃ ┣ 📜 aiRoutes.js  
- ┃ ┗ 📜 dmcaRoutes.js  
- ┣ 📂 middleware/  
- ┃ ┣ 📜 authMiddleware.js  
- ┃ ┗ 📜 errorHandler.js  
- ┣ 📂 config/  
- ┃ ┗ 📜 db.js  
- ┣ 📂 services/  
- ┃ ┣ 📜 aiService.js  
- ┃ ┗ 📜 dmcaService.js  
- ┣ 📂 storage/  
- ┃ ┗ 📜 upload.js  
- ┣ 📜 app.js  
- ┣ 📜 .env  
- ┣ 📜 package.json
+📦 backend  
+ ┣ 📂 config/
+ ┣  ┣ 📂 db/
+ ┣  ┗ 📂 email/
+ ┣ 📂 controllers/
+ ┣ 📂 roots/
+ ┣ 📂 models/
+ ┣ 📜 index.js
+ ┗ 📜 app.js
 ```
 
-## **Features (Backend)**  
-✔ RESTful API for AI processing and takedown management  
-✔ Secure authentication using JWT  
-✔ Database integration with Firestore  
-✔ Handles YouTube video scraping and processing  
+## Features
+- Real-time YouTube video monitoring
+- AI-powered content analysis using OpenCV
+- Automated detection of Disney characters and logos
+- Integration with YouTube Data API
+- Firestore database for data storage
+- User-friendly dashboard for monitoring
 
----
-## Team Members
-
-| Name                | Role                        | Description                | Contact                        |
-|---------------------|-----------------------------|----------------------------|--------------------------------|
-| Shaktidhar Gupta    | Leader & AIML Engineer       | Leads the team and works on AI/ML tasks | [sktigpta@gmail.com](mailto:sktigpta@gmail.com) |
-| Satyam Kumar        | Backend Developer           | Handles the server-side and database management | [jhajhasatyam100@gmail.com](mailto:jhajhasatyam100@gmail.com) |
-| Saurav Kumar        | Frontend Designer and UI/UX engg        | Works on the user interface design | [sauravkumar9447@gmail.com](mailto:sauravkumar9447@gmail.com) |
-| Rishi Srestha       | Frontend Designer & Documentation | Designs the UI and handles project documentation | [rishi@example.com](mailto:rishi@example.com) |
-
-
-## **Configuration**  
-Create a `.env` file in the root directory and set:  
-```
-YOUTUBE_API_KEY=your_api_key_here
-FIRESTORE_PROJECT_ID=your_firestore_project
-DMCA_HANDLER_API=your_dmca_api_endpoint
-
+<!-- ## Installation
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/youtube-ai-analyzer.git
+cd youtube-ai-analyzer
 ```
 
+2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+3. Set up environment variables
+```bash
+cp .env.example .env
+# Edit .env with your API keys
+``` -->
+
+## Configuration
+1. YouTube Data API Setup:
+   - Create a Google Cloud Project
+   - Enable YouTube Data API
+   - Generate API key
+
+2. Firebase Setup:
+   - Create a Firebase project
+   - Enable Firestore
+   - Download service account key
 
 
+### Core Components
+
+| File | Description | Function |
+|------|-------------|-----------|
+| `src/main.py` | Entry point | Orchestrates the entire application flow |
+| `src/config.py` | Configuration | Stores API keys and global settings |
+| `src/utils.py` | Utilities | Contains helper functions |
+
+### API Components
+
+| File | Description | Function |
+|------|-------------|-----------|
+| `src/api/youtube_scraper.py` | YouTube Scraper | Fetches videos using YouTube Data API |
+
+### Processing Components
+
+| File | Description | Function |
+|------|-------------|-----------|
+| `src/processing/video_downloader.py` | Video Downloader | Downloads YouTube videos for analysis |
+| `src/processing/frame_extractor.py` | Frame Extractor | Extracts frames from videos |
+
+### AI Components
+
+| File | Description | Function |
+|------|-------------|-----------|
+| `src/ai/object_detection.py` | Object Detection | Detects Disney characters and logos |
+| `src/ai/feature_extraction.py` | Feature Extraction | Extracts features from video frames |
+
+### Storage Components
+
+| File | Description | Function |
+|------|-------------|-----------|
+| `src/storage/firestore_db.py` | Database Handler | Manages Firestore operations |
+
+## Usage
+
+### Basic Usage
+```python
+from src.main import YouTubeAnalyzer
+
+analyzer = YouTubeAnalyzer()
+analyzer.start_monitoring()
+```
+
+### Running Tests
+```bash
+python -m pytest tests/
+```
+
+## Tech Stack
+- Python 3.8+
+- OpenCV for video analysis
+- TensorFlow/YOLO for object detection
+- Firebase Firestore for data storage
+- YouTube Data API v3
+- Flutter/React for dashboard
+
+## Team
+**Tech-NO-Logic**: A dynamic team of innovators uniting tech and creativity to solve real-world problems with cutting-edge solutions. Passion meets logic for impactful change. 🚀
+
+## License
+no license till now
+
+## Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
